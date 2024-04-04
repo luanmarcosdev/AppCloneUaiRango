@@ -25,7 +25,7 @@ class IndexScreen: UIView {
     lazy var backgroundView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = CustomColor.orange
+        view.backgroundColor = CustomColor.orangeBackground
         return view
     }()
     
@@ -42,7 +42,7 @@ class IndexScreen: UIView {
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.text = "UaiRango"
         lb.font = UIFont.systemFont(ofSize: 44)
-        lb.textColor = CustomColor.white
+        lb.textColor = CustomColor.whiteMain
         return lb
     }()
     
@@ -51,8 +51,8 @@ class IndexScreen: UIView {
         bt.translatesAutoresizingMaskIntoConstraints = false
         bt.setTitle("Selecione sua cidade", for: .normal)
         bt.titleLabel?.font = .systemFont(ofSize: 16)
-        bt.setTitleColor(CustomColor.white, for: .normal)
-        bt.backgroundColor = CustomColor.orange
+        bt.setTitleColor(CustomColor.whiteMain, for: .normal)
+        bt.backgroundColor = CustomColor.orangeMain
         bt.clipsToBounds = true
         bt.layer.cornerRadius = 7.5
         bt.addTarget(self, action: #selector(self.tappedCityButton), for: .touchUpInside)
@@ -64,7 +64,7 @@ class IndexScreen: UIView {
         bt.translatesAutoresizingMaskIntoConstraints = false
         bt.setTitle("Logar/Cadastrar", for: .normal)
         bt.titleLabel?.font = .systemFont(ofSize: 16)
-        bt.setTitleColor(CustomColor.white, for: .normal)
+        bt.setTitleColor(CustomColor.whiteMain, for: .normal)
         bt.backgroundColor = CustomColor.green
         bt.clipsToBounds = true
         bt.layer.cornerRadius = 7.5
@@ -86,7 +86,7 @@ class IndexScreen: UIView {
         bt.translatesAutoresizingMaskIntoConstraints = false
         bt.setTitle("Termos de uso", for: .normal)
         bt.titleLabel?.font = .systemFont(ofSize: 16)
-        bt.setTitleColor(CustomColor.white, for: .normal)
+        bt.setTitleColor(CustomColor.whiteMain, for: .normal)
         bt.backgroundColor = .clear
         bt.addTarget(self, action: #selector(self.tappedUseTermsButton), for: .touchUpInside)
         return bt
@@ -97,7 +97,7 @@ class IndexScreen: UIView {
         bt.translatesAutoresizingMaskIntoConstraints = false
         bt.setTitle("Sobre o UaiRango", for: .normal)
         bt.titleLabel?.font = .systemFont(ofSize: 16)
-        bt.setTitleColor(CustomColor.white, for: .normal)
+        bt.setTitleColor(CustomColor.whiteMain, for: .normal)
         bt.backgroundColor = .clear
         bt.addTarget(self, action: #selector(self.tappedAboutButton), for: .touchUpInside)
         return bt
@@ -116,7 +116,7 @@ class IndexScreen: UIView {
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.text = "www.uairango.com"
         lb.font = UIFont.systemFont(ofSize: 16)
-        lb.textColor = CustomColor.white
+        lb.textColor = CustomColor.whiteMain
         return lb
     }()
     

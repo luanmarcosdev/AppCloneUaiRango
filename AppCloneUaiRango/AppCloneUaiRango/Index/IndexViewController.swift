@@ -33,7 +33,8 @@ extension IndexViewController: IndexScreenDelegate {
     }
     
     func actionUserTermsButton() {
-        print("useterms clicked")
+        let vc = UseTermsViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func actionAboutButton() {
