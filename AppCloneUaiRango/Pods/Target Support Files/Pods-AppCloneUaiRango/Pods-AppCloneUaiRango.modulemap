@@ -1,0 +1,6 @@
+framework module Pods_AppCloneUaiRango {
+  umbrella header "Pods-AppCloneUaiRango-umbrella.h"
+
+  export *
+  module * { export * }
+}
