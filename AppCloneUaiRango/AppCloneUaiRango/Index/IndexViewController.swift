@@ -33,11 +33,11 @@ extension IndexViewController: IndexScreenDelegate {
     }
     
     func actionUserTermsButton() {
-        //depois
+        print("useterms clicked")
     }
     
     func actionAboutButton() {
-        //depois
+        print("about button clicked")
     }
     
     

@@ -81,23 +81,28 @@ class IndexScreen: UIView {
         return stack
     }()
     
-    lazy var useTermsLabel: UILabel = {
-        let lb = UILabel()
-        lb.translatesAutoresizingMaskIntoConstraints = false
-        lb.text = "Termos de uso"
-        lb.font = UIFont.systemFont(ofSize: 16)
-        lb.textColor = CustomColor.white
-        return lb
+    lazy var useTermsButton: UIButton = {
+        let bt = UIButton()
+        bt.translatesAutoresizingMaskIntoConstraints = false
+        bt.setTitle("Termos de uso", for: .normal)
+        bt.titleLabel?.font = .systemFont(ofSize: 16)
+        bt.setTitleColor(CustomColor.white, for: .normal)
+        bt.backgroundColor = .clear
+        bt.addTarget(self, action: #selector(self.tappedUseTermsButton), for: .touchUpInside)
+        return bt
     }()
     
-    lazy var aboutLabel: UILabel = {
-        let lb = UILabel()
-        lb.translatesAutoresizingMaskIntoConstraints = false
-        lb.text = "Sobre o UaiRango"
-        lb.font = UIFont.systemFont(ofSize: 16)
-        lb.textColor = CustomColor.white
-        return lb
+    lazy var aboutButton: UIButton = {
+        let bt = UIButton()
+        bt.translatesAutoresizingMaskIntoConstraints = false
+        bt.setTitle("Sobre o UaiRango", for: .normal)
+        bt.titleLabel?.font = .systemFont(ofSize: 16)
+        bt.setTitleColor(CustomColor.white, for: .normal)
+        bt.backgroundColor = .clear
+        bt.addTarget(self, action: #selector(self.tappedAboutButton), for: .touchUpInside)
+        return bt
     }()
+
     
     lazy var footerView: UIView = {
         let view = UIView()
@@ -121,6 +126,14 @@ class IndexScreen: UIView {
     
     @objc private func tappedLoginButton() {
         self.delegate?.actionLoginButton()
+    }
+    
+    @objc private func tappedUseTermsButton() {
+        self.delegate?.actionUserTermsButton()
+    }
+    
+    @objc private func tappedAboutButton() {
+        self.delegate?.actionAboutButton()
     }
 
     override init(frame: CGRect) {
@@ -147,8 +160,8 @@ class IndexScreen: UIView {
         self.addSubview(self.cityButton)
         self.addSubview(self.loginButton)
         self.addSubview(self.buttonsStackView)
-        self.buttonsStackView.addArrangedSubview(self.useTermsLabel)
-        self.buttonsStackView.addArrangedSubview(self.aboutLabel)
+        self.buttonsStackView.addArrangedSubview(self.useTermsButton)
+        self.buttonsStackView.addArrangedSubview(self.aboutButton)
         self.addSubview(self.footerView)
         self.footerView.addSubview(self.labelFooter)
     }
