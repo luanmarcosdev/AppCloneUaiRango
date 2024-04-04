@@ -18,9 +18,27 @@ class IndexViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.indexScreen?.setDelegate(delegate: self)
+    }
+
+}
+
+extension IndexViewController: IndexScreenDelegate {
+    func actionCityButton() {
+        print("print city view controller")
     }
     
-
-
-
+    func actionLoginButton() {
+        print("login login view controller")
+    }
+    
+    func actionUserTermsButton() {
+        //depois
+    }
+    
+    func actionAboutButton() {
+        //depois
+    }
+    
+    
 }

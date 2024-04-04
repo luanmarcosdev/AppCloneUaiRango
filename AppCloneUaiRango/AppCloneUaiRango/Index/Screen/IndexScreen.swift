@@ -7,7 +7,20 @@
 
 import UIKit
 
+protocol IndexScreenDelegate: AnyObject {
+    func actionCityButton()
+    func actionLoginButton()
+    func actionUserTermsButton()
+    func actionAboutButton()
+}
+
 class IndexScreen: UIView {
+    
+    weak var delegate: IndexScreenDelegate?
+    
+    func setDelegate(delegate: IndexScreenDelegate?) {
+        self.delegate = delegate
+    }
     
     lazy var backgroundView: UIView = {
         let view = UIView()
@@ -42,6 +55,7 @@ class IndexScreen: UIView {
         bt.backgroundColor = CustomColor.orange
         bt.clipsToBounds = true
         bt.layer.cornerRadius = 7.5
+        bt.addTarget(self, action: #selector(self.tappedCityButton), for: .touchUpInside)
         return bt
     }()
     
@@ -54,6 +68,7 @@ class IndexScreen: UIView {
         bt.backgroundColor = CustomColor.green
         bt.clipsToBounds = true
         bt.layer.cornerRadius = 7.5
+        bt.addTarget(self, action: #selector(self.tappedLoginButton), for: .touchUpInside)
         return bt
     }()
     
@@ -99,6 +114,14 @@ class IndexScreen: UIView {
         lb.textColor = CustomColor.white
         return lb
     }()
+    
+    @objc private func tappedCityButton() {
+        self.delegate?.actionCityButton()
+    }
+    
+    @objc private func tappedLoginButton() {
+        self.delegate?.actionLoginButton()
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -120,10 +143,10 @@ class IndexScreen: UIView {
     private func configSuperView(){
         self.addSubview(self.backgroundView)
         self.addSubview(self.imageBackView)
-        self.imageBackView.addSubview(self.logoLabel)
-        self.imageBackView.addSubview(self.cityButton)
-        self.imageBackView.addSubview(self.loginButton)
-        self.imageBackView.addSubview(self.buttonsStackView)
+        self.addSubview(self.logoLabel)
+        self.addSubview(self.cityButton)
+        self.addSubview(self.loginButton)
+        self.addSubview(self.buttonsStackView)
         self.buttonsStackView.addArrangedSubview(self.useTermsLabel)
         self.buttonsStackView.addArrangedSubview(self.aboutLabel)
         self.addSubview(self.footerView)
