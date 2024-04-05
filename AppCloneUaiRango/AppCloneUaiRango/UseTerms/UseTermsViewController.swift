@@ -19,6 +19,15 @@ class UseTermsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
+        self.useTermsScreen?.setDelegate(delegate: self)
+    }
+    
+}
+
+extension UseTermsViewController: UseTermsDelegate {
+    
+    func actionBackButton() {
+        self.navigationController?.popViewController(animated: true)
     }
     
 }

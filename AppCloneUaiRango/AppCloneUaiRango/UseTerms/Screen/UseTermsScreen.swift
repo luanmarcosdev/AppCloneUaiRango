@@ -7,7 +7,17 @@
 
 import UIKit
 
+protocol UseTermsDelegate: AnyObject {
+    func actionBackButton()
+}
+
 class UseTermsScreen: UIView {
+    
+    private weak var delegate: UseTermsDelegate?
+    
+    public func setDelegate(delegate: UseTermsDelegate?){
+        self.delegate = delegate
+    }
     
     lazy var backgroundView: UIView = {
         let view = UIView()
@@ -28,6 +38,7 @@ class UseTermsScreen: UIView {
         bt.translatesAutoresizingMaskIntoConstraints = false
         bt.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
         bt.tintColor = CustomColor.whiteMain
+        bt.addTarget(self, action: #selector(tappedBackButton), for: .touchUpInside)
         return bt
     }()
     
@@ -101,6 +112,10 @@ class UseTermsScreen: UIView {
         self.configScrollViewConstraints()
         self.configTitleLabelConstraints()
         self.configTextLabelConstraints()
+    }
+    
+    @objc private func tappedBackButton() {
+        self.delegate?.actionBackButton()
     }
     
     required init?(coder: NSCoder) {
