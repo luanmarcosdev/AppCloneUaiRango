@@ -40,14 +40,14 @@ class UseTermsScreen: UIView {
         return lb
     }()
     
-    lazy var backgroundTitleView: UIView = {
+    lazy var headerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = CustomColor.whiteSecond
         return view
     }()
-
-    lazy var titleLabel: UILabel = {
+    
+    lazy var headerLabel: UILabel = {
         let lb = UILabel()
         lb.text = "TERMOS DE USO"
         lb.font = .systemFont(ofSize: 10)
@@ -62,6 +62,32 @@ class UseTermsScreen: UIView {
         return view
     }()
     
+    lazy var titleLabel: UILabel = {
+        let lb = UILabel()
+        lb.text = "TERMOS E CONDIÇÕES"
+        lb.font = .boldSystemFont(ofSize: 16)
+        lb.textColor = .black
+        return lb
+    }()
+    
+    lazy var scrollView: UIScrollView = {
+        let sv = UIScrollView()
+        sv.showsVerticalScrollIndicator = true
+        sv.showsHorizontalScrollIndicator = false
+        return sv
+    }()
+    
+    lazy var textLabel: UILabel = {
+        let lb = UILabel()
+        lb.text = LoremIpsum.text
+        lb.numberOfLines = 0
+        lb.lineBreakMode = .byWordWrapping
+        lb.font = .systemFont(ofSize: 12)
+        lb.textColor = .black
+        return lb
+    }()
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.configSuperView()
@@ -69,9 +95,12 @@ class UseTermsScreen: UIView {
         self.configBarViewConstraint()
         self.configBackButtonConstraint()
         self.configLogoLabelConstraint()
-        self.configBackgroundTitleViewConstraints()
-        self.configTitleLabelConstraints()
+        self.configHeaderViewConstraints()
+        self.configHeaderLabelConstraints()
         self.configMainViewConstraints()
+        self.configScrollViewConstraints()
+        self.configTitleLabelConstraints()
+        self.configTextLabelConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -83,9 +112,12 @@ class UseTermsScreen: UIView {
         self.addSubview(self.barView)
         self.barView.addSubview(self.backButton)
         self.barView.addSubview(self.logoLabel)
-        self.addSubview(self.backgroundTitleView)
-        self.addSubview(self.titleLabel)
+        self.addSubview(self.headerView)
+        self.addSubview(self.headerLabel)
         self.addSubview(self.mainView)
+        self.mainView.addSubview(self.scrollView)
+        self.scrollView.addSubview(self.titleLabel)
+        self.scrollView.addSubview(self.textLabel)
     }
     
     private func configBackgroundViewConstraints() {
@@ -116,25 +148,49 @@ class UseTermsScreen: UIView {
         }
     }
     
-    private func configBackgroundTitleViewConstraints() {
-        self.backgroundTitleView.snp.makeConstraints { make in
+    private func configHeaderViewConstraints() {
+        self.headerView.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(24)
             make.top.equalTo(self.barView.snp.bottom)        }
     }
     
-    private func configTitleLabelConstraints() {
-        self.titleLabel.snp.makeConstraints { make in
-            make.centerX.equalTo(self.backgroundTitleView.snp.centerX)
-            make.centerY.equalTo(self.backgroundTitleView.snp.centerY)
+    private func configHeaderLabelConstraints() {
+        self.headerLabel.snp.makeConstraints { make in
+            make.centerX.equalTo(self.headerView.snp.centerX)
+            make.centerY.equalTo(self.headerView.snp.centerY)
         }
     }
     
     private func configMainViewConstraints() {
         self.mainView.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview()
-            make.top.equalTo(self.backgroundTitleView.snp.bottom)
+            make.top.equalTo(self.headerView.snp.bottom)
             make.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom)
+        }
+    }
+    
+    private func configScrollViewConstraints() {
+        self.scrollView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+    }
+    
+    private func configTitleLabelConstraints() {
+        self.titleLabel.snp.makeConstraints { make in
+            make.leading.equalToSuperview().offset(16)
+            make.height.equalTo(18)
+            make.top.equalTo(self.scrollView.snp.top).offset(24)
+        }
+    }
+    
+    private func configTextLabelConstraints() {
+        self.textLabel.snp.makeConstraints { make in
+            make.leading.equalTo(self.titleLabel.snp.leading)
+            make.trailing.equalToSuperview().inset(16)
+            make.top.equalTo(self.titleLabel.snp.bottom).offset(10)
+            make.bottom.equalToSuperview().inset(24)
+            make.width.equalToSuperview().inset(16)
         }
     }
     

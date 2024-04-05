@@ -21,6 +21,4 @@ class UseTermsViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
     }
     
-
-
 }

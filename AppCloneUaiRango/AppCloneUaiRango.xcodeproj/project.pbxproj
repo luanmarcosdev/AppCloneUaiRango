@@ -17,6 +17,7 @@
 		CA9FB2012BBDD329005A31E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA9FB1FF2BBDD329005A31E2 /* LaunchScreen.storyboard */; };
 		CA9FB20D2BBDD480005A31E2 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FB20C2BBDD480005A31E2 /* IndexViewController.swift */; };
 		CA9FB2102BBDD4D4005A31E2 /* IndexScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FB20F2BBDD4D4005A31E2 /* IndexScreen.swift */; };
+		CAA249542BC05E0C006FC334 /* LoremIpsum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA249532BC05E0C006FC334 /* LoremIpsum.swift */; };
 		DB95EBAE461FA3E242F82C79 /* Pods_AppCloneUaiRango.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD1454C81ABFD575C2B675A /* Pods_AppCloneUaiRango.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		CA9FB2022BBDD329005A31E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA9FB20C2BBDD480005A31E2 /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
 		CA9FB20F2BBDD4D4005A31E2 /* IndexScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexScreen.swift; sourceTree = "<group>"; };
+		CAA249532BC05E0C006FC334 /* LoremIpsum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremIpsum.swift; sourceTree = "<group>"; };
 		D0691E7FEE92FB6AF06CB8AE /* Pods-AppCloneUaiRango.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppCloneUaiRango.release.xcconfig"; path = "Target Support Files/Pods-AppCloneUaiRango/Pods-AppCloneUaiRango.release.xcconfig"; sourceTree = "<group>"; };
 		FAD1454C81ABFD575C2B675A /* Pods_AppCloneUaiRango.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppCloneUaiRango.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -138,6 +140,7 @@
 			children = (
 				CA8EA3952BBDE19C0057273A /* Custom.swift */,
 				CA990A5C2BBF2CED006EF8E2 /* NavBar.swift */,
+				CAA249532BC05E0C006FC334 /* LoremIpsum.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA9FB2102BBDD4D4005A31E2 /* IndexScreen.swift in Sources */,
+				CAA249542BC05E0C006FC334 /* LoremIpsum.swift in Sources */,
 				CA990A5D2BBF2CED006EF8E2 /* NavBar.swift in Sources */,
 				CA9FB1F52BBDD328005A31E2 /* AppDelegate.swift in Sources */,
 				CA9FB1F72BBDD328005A31E2 /* SceneDelegate.swift in Sources */,
