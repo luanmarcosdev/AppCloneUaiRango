@@ -155,7 +155,7 @@ class IndexScreen: UIView {
     
     private func configSuperView(){
         self.addSubview(self.backgroundView)
-        self.addSubview(self.imageBackView)
+        self.backgroundView.addSubview(self.imageBackView)
         self.addSubview(self.logoLabel)
         self.addSubview(self.cityButton)
         self.addSubview(self.loginButton)
@@ -175,7 +175,7 @@ class IndexScreen: UIView {
     private func configImageBackViewConstraints() {
         self.imageBackView.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview()
-            make.top.equalTo(self.safeAreaLayoutGuide.snp.top).inset(-44)
+            make.top.equalTo(self.safeAreaLayoutGuide.snp.top)
             make.bottom.equalTo(self.footerView.snp.top)
         }
     }

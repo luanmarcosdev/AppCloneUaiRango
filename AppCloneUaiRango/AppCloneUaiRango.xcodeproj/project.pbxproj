@@ -18,6 +18,8 @@
 		CA9FB20D2BBDD480005A31E2 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FB20C2BBDD480005A31E2 /* IndexViewController.swift */; };
 		CA9FB2102BBDD4D4005A31E2 /* IndexScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FB20F2BBDD4D4005A31E2 /* IndexScreen.swift */; };
 		CAA249542BC05E0C006FC334 /* LoremIpsum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA249532BC05E0C006FC334 /* LoremIpsum.swift */; };
+		CAA249572BC0740D006FC334 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA249562BC0740D006FC334 /* AboutViewController.swift */; };
+		CAA249592BC07427006FC334 /* AboutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA249582BC07427006FC334 /* AboutScreen.swift */; };
 		DB95EBAE461FA3E242F82C79 /* Pods_AppCloneUaiRango.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD1454C81ABFD575C2B675A /* Pods_AppCloneUaiRango.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +38,8 @@
 		CA9FB20C2BBDD480005A31E2 /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
 		CA9FB20F2BBDD4D4005A31E2 /* IndexScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexScreen.swift; sourceTree = "<group>"; };
 		CAA249532BC05E0C006FC334 /* LoremIpsum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremIpsum.swift; sourceTree = "<group>"; };
+		CAA249562BC0740D006FC334 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		CAA249582BC07427006FC334 /* AboutScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutScreen.swift; sourceTree = "<group>"; };
 		D0691E7FEE92FB6AF06CB8AE /* Pods-AppCloneUaiRango.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppCloneUaiRango.release.xcconfig"; path = "Target Support Files/Pods-AppCloneUaiRango/Pods-AppCloneUaiRango.release.xcconfig"; sourceTree = "<group>"; };
 		FAD1454C81ABFD575C2B675A /* Pods_AppCloneUaiRango.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppCloneUaiRango.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -55,6 +59,8 @@
 		CA990A552BBF2A6B006EF8E2 /* About */ = {
 			isa = PBXGroup;
 			children = (
+				CAA249552BC073F5006FC334 /* Screen */,
+				CAA249562BC0740D006FC334 /* AboutViewController.swift */,
 			);
 			path = About;
 			sourceTree = "<group>";
@@ -149,6 +155,14 @@
 			isa = PBXGroup;
 			children = (
 				CA9FB20F2BBDD4D4005A31E2 /* IndexScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		CAA249552BC073F5006FC334 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CAA249582BC07427006FC334 /* AboutScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -292,6 +306,8 @@
 				CA9FB20D2BBDD480005A31E2 /* IndexViewController.swift in Sources */,
 				CA990A582BBF2AC1006EF8E2 /* UseTermsViewController.swift in Sources */,
 				CA8EA3962BBDE19C0057273A /* Custom.swift in Sources */,
+				CAA249592BC07427006FC334 /* AboutScreen.swift in Sources */,
+				CAA249572BC0740D006FC334 /* AboutViewController.swift in Sources */,
 				CA990A5B2BBF2AE0006EF8E2 /* UseTermsScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

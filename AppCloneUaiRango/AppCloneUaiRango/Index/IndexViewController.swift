@@ -38,8 +38,8 @@ extension IndexViewController: IndexScreenDelegate {
     }
     
     func actionAboutButton() {
-        print("about button clicked")
+        let vc = AboutViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
-    
     
 }
