@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA8A6D872BC4B1860022B89D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8A6D862BC4B1860022B89D /* LoginViewController.swift */; };
+		CA8A6D8A2BC4B1A50022B89D /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8A6D892BC4B1A50022B89D /* LoginScreen.swift */; };
 		CA8EA3962BBDE19C0057273A /* Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8EA3952BBDE19C0057273A /* Custom.swift */; };
 		CA990A582BBF2AC1006EF8E2 /* UseTermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA990A572BBF2AC1006EF8E2 /* UseTermsViewController.swift */; };
 		CA990A5B2BBF2AE0006EF8E2 /* UseTermsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA990A5A2BBF2AE0006EF8E2 /* UseTermsScreen.swift */; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		8C23C47C174C9ABEE136B2AA /* Pods-AppCloneUaiRango.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppCloneUaiRango.debug.xcconfig"; path = "Target Support Files/Pods-AppCloneUaiRango/Pods-AppCloneUaiRango.debug.xcconfig"; sourceTree = "<group>"; };
+		CA8A6D862BC4B1860022B89D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CA8A6D892BC4B1A50022B89D /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		CA8EA3952BBDE19C0057273A /* Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom.swift; sourceTree = "<group>"; };
 		CA990A572BBF2AC1006EF8E2 /* UseTermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseTermsViewController.swift; sourceTree = "<group>"; };
 		CA990A5A2BBF2AE0006EF8E2 /* UseTermsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseTermsScreen.swift; sourceTree = "<group>"; };
@@ -56,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA8A6D882BC4B18B0022B89D /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CA8A6D892BC4B1A50022B89D /* LoginScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		CA990A552BBF2A6B006EF8E2 /* About */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +133,8 @@
 		CA9FB2082BBDD3A1005A31E2 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				CA8A6D882BC4B18B0022B89D /* Screen */,
+				CA8A6D862BC4B1860022B89D /* LoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -298,6 +312,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA8A6D8A2BC4B1A50022B89D /* LoginScreen.swift in Sources */,
+				CA8A6D872BC4B1860022B89D /* LoginViewController.swift in Sources */,
 				CA9FB2102BBDD4D4005A31E2 /* IndexScreen.swift in Sources */,
 				CAA249542BC05E0C006FC334 /* LoremIpsum.swift in Sources */,
 				CA990A5D2BBF2CED006EF8E2 /* NavBar.swift in Sources */,

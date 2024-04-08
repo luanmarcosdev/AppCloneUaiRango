@@ -13,6 +13,7 @@ class IndexViewController: UIViewController {
     
     override func loadView() {
         self.indexScreen = IndexScreen()
+        self.navigationController?.isNavigationBarHidden = true
         self.view = indexScreen
     }
 
@@ -29,7 +30,8 @@ extension IndexViewController: IndexScreenDelegate {
     }
     
     func actionLoginButton() {
-        print("login login view controller")
+        let vc = LoginViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func actionUserTermsButton() {
