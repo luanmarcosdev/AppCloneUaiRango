@@ -19,6 +19,15 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .red
+        loginScreen?.setDelegate(delegate: self)
+    }
+    
+}
+
+extension LoginViewController: LoginScreenDelegate {
+    
+    func actionBackButton() {
+        self.navigationController?.popViewController(animated: true)
     }
     
 }
