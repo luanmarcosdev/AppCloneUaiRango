@@ -26,6 +26,12 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: LoginScreenDelegate {
     
+    func actionLinkLabel() {
+        let vc = UseTermsViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
     func actionBackButton() {
         self.navigationController?.popViewController(animated: true)
     }
