@@ -41,4 +41,9 @@ extension LoginViewController: LoginScreenDelegate {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    func actionForgotPasswordButton() {
+        let vc = RecoverViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }

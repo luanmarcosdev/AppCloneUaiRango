@@ -11,6 +11,7 @@ protocol LoginScreenDelegate: AnyObject {
     func actionBackButton()
     func actionLinkLabel()
     func actionRegisterButton()
+    func actionForgotPasswordButton()
 }
 
 class LoginScreen: UIView {
@@ -191,6 +192,7 @@ class LoginScreen: UIView {
         bt.titleLabel?.font = .boldSystemFont(ofSize: 14)
         bt.setTitleColor(CustomColor.green, for: .normal)
         bt.backgroundColor = .none
+        bt.addTarget(self, action: #selector(tappedForgotPasswordButton), for: .touchUpInside)
         return bt
     }()
     
@@ -283,6 +285,10 @@ class LoginScreen: UIView {
     
     @objc private func tappedCreateAccountButton() {
         self.delegate?.actionRegisterButton()
+    }
+    
+    @objc private func tappedForgotPasswordButton() {
+        self.delegate?.actionForgotPasswordButton()
     }
     
     private func configSuperView() {
