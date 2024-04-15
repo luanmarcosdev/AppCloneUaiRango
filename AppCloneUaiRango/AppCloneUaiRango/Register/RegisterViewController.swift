@@ -18,10 +18,21 @@ class RegisterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .red
+        self.registerScreen?.setDelegate(delegate: self)
+    }
+
+}
+
+extension RegisterViewController: RegisterScreenDelegate {
+    
+    func actionBackButton() {
+        self.navigationController?.popViewController(animated: true)
     }
     
-
-  
-
+    func actionLoginButton() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    
 }
