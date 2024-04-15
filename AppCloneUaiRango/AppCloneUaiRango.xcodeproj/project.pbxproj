@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA69F5A42BCD518800378164 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA69F5A32BCD518800378164 /* RegisterScreen.swift */; };
+		CA69F5A72BCD51A600378164 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA69F5A62BCD51A600378164 /* RegisterViewController.swift */; };
 		CA8A6D872BC4B1860022B89D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8A6D862BC4B1860022B89D /* LoginViewController.swift */; };
 		CA8A6D8A2BC4B1A50022B89D /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8A6D892BC4B1A50022B89D /* LoginScreen.swift */; };
 		CA8EA3962BBDE19C0057273A /* Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8EA3952BBDE19C0057273A /* Custom.swift */; };
@@ -27,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		8C23C47C174C9ABEE136B2AA /* Pods-AppCloneUaiRango.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppCloneUaiRango.debug.xcconfig"; path = "Target Support Files/Pods-AppCloneUaiRango/Pods-AppCloneUaiRango.debug.xcconfig"; sourceTree = "<group>"; };
+		CA69F5A32BCD518800378164 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
+		CA69F5A62BCD51A600378164 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		CA8A6D862BC4B1860022B89D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CA8A6D892BC4B1A50022B89D /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		CA8EA3952BBDE19C0057273A /* Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom.swift; sourceTree = "<group>"; };
@@ -60,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA69F5A52BCD519000378164 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CA69F5A32BCD518800378164 /* RegisterScreen.swift */,
+			);
+			name = Screen;
+			sourceTree = "<group>";
+		};
 		CA8A6D882BC4B18B0022B89D /* Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +163,8 @@
 		CA9FB20A2BBDD41A005A31E2 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				CA69F5A52BCD519000378164 /* Screen */,
+				CA69F5A62BCD51A600378164 /* RegisterViewController.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -318,10 +332,12 @@
 				CAA249542BC05E0C006FC334 /* LoremIpsum.swift in Sources */,
 				CA990A5D2BBF2CED006EF8E2 /* NavBar.swift in Sources */,
 				CA9FB1F52BBDD328005A31E2 /* AppDelegate.swift in Sources */,
+				CA69F5A72BCD51A600378164 /* RegisterViewController.swift in Sources */,
 				CA9FB1F72BBDD328005A31E2 /* SceneDelegate.swift in Sources */,
 				CA9FB20D2BBDD480005A31E2 /* IndexViewController.swift in Sources */,
 				CA990A582BBF2AC1006EF8E2 /* UseTermsViewController.swift in Sources */,
 				CA8EA3962BBDE19C0057273A /* Custom.swift in Sources */,
+				CA69F5A42BCD518800378164 /* RegisterScreen.swift in Sources */,
 				CAA249592BC07427006FC334 /* AboutScreen.swift in Sources */,
 				CAA249572BC0740D006FC334 /* AboutViewController.swift in Sources */,
 				CA990A5B2BBF2AE0006EF8E2 /* UseTermsScreen.swift in Sources */,

@@ -10,6 +10,7 @@ import UIKit
 protocol LoginScreenDelegate: AnyObject {
     func actionBackButton()
     func actionLinkLabel()
+    func actionRegisterButton()
 }
 
 class LoginScreen: UIView {
@@ -220,6 +221,7 @@ class LoginScreen: UIView {
         bt.backgroundColor = CustomColor.whiteMain
         bt.clipsToBounds = true
         bt.layer.cornerRadius = 7.5
+        bt.addTarget(self, action: #selector(tappedCreateAccountButton), for: .touchUpInside)
         return bt
     }()
 
@@ -277,6 +279,10 @@ class LoginScreen: UIView {
                 delegate?.actionLinkLabel()
             }
         }
+    }
+    
+    @objc private func tappedCreateAccountButton() {
+        self.delegate?.actionRegisterButton()
     }
     
     private func configSuperView() {

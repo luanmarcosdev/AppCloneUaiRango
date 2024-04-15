@@ -36,4 +36,9 @@ extension LoginViewController: LoginScreenDelegate {
         self.navigationController?.popViewController(animated: true)
     }
     
+    func actionRegisterButton() {
+        let vc = RegisterViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
