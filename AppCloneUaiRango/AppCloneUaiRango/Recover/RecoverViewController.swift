@@ -18,8 +18,20 @@ class RecoverViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .red
+        self.recoverScreen?.setDelegate(delegate: self)
     }
     
+}
 
+extension RecoverViewController: RecoverScreenDelegate {
+   
+    func actionBackButton() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    func actionLoginButton() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
 }
