@@ -1,7 +1,7 @@
 # UaiRango App Clone
 
 Neste projeto clonei algumas telas do aplicatibo UaiRango que é a empresa do ramo de food service referencia de tecnologia da minha cidade. 
-Desenvolvi este projeto para solidificar os conhecimentos em ViewCode, nele utilizei Cocoadpods como gerenciador de dependencia juntamente com o SnapKit para me auxiliar na construção de constraints, além disso o projeto foi uma virada de chave do meu entendimento do funcionamento do Protocol Delegate, já que usei do protocolo para delegar as ações da View para a ViewController.
+Desenvolvi este projeto para solidificar os conhecimentos em ViewCode, nele utilizei Cocoadpods como gerenciador de dependencia juntamente com o SnapKit para me auxiliar na construção de constraints.
 Posteriormente estarei incrementando este projeto com mais telas e deixando ele funcional, assim como na inspiração para esse projeto.
 
 Conheça o UaiRango, aplicativo que foi usado como referencia.
